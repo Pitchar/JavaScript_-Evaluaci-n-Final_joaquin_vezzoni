@@ -81,8 +81,23 @@ var Calculadora = {
   this.on.addEventListener("click",function(){
   display.innerHTML=0
 })
-
-
+  //operaciones matematicas.
+  Calculadora.animarTecla("mas")
+  this.mas.addEventListener("click",function(){
+  Calculadora.sumar()
+})
+  Calculadora.animarTecla("menos")
+  this.mas.addEventListener("click",function(){
+  Calculadora.restar()
+})
+  Calculadora.animarTecla("por")
+  this.mas.addEventListener("click",function(){
+  Calculadora.multiplicar()
+})
+  Calculadora.animarTecla("dividido")
+  this.mas.addEventListener("click",function(){
+  Calculadora.dividir()
+})
 
 
 
