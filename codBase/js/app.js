@@ -25,56 +25,66 @@ var Calculadora = {
   eventos: function() {
 
   Calculadora.animarTecla("0")
-  this.uno.addEventListener("click", function() {
+  this.cero.addEventListener("click", function() {
   Calculadora.mostrar("0")
   })
   Calculadora.animarTecla("1")
-  this.dos.addEventListener("click", function(){
+  this.uno.addEventListener("click", function(){
   Calculadora.mostrar("1")
   })
   Calculadora.animarTecla("2")
-  this.tres.addEventListener("click", function(){
+  this.dos.addEventListener("click", function(){
   Calculadora.mostrar("2")
   })
   Calculadora.animarTecla("3")
-  this.uno.addEventListener("click", function() {
+  this.tres.addEventListener("click", function() {
   Calculadora.mostrar("3")
   })
   Calculadora.animarTecla("4")
-  this.uno.addEventListener("click", function() {
+  this.cuatro.addEventListener("click", function() {
   Calculadora.mostrar("4")
   })
   Calculadora.animarTecla("5")
-  this.uno.addEventListener("click", function() {
+  this.cinco.addEventListener("click", function() {
   Calculadora.mostrar("5")
   })
   Calculadora.animarTecla("6")
-  this.uno.addEventListener("click", function() {
+  this.seis.addEventListener("click", function() {
   Calculadora.mostrar("6")
   })
   Calculadora.animarTecla("7")
-  this.uno.addEventListener("click", function() {
+  this.siete.addEventListener("click", function() {
   Calculadora.mostrar("7")
   })
   Calculadora.animarTecla("8")
-  this.uno.addEventListener("click", function() {
+  this.ocho.addEventListener("click", function() {
   Calculadora.mostrar("8")
   })
   Calculadora.animarTecla("9")
-  this.uno.addEventListener("click", function() {
+  this.nueve.addEventListener("click", function() {
   Calculadora.mostrar("9")
   })
   Calculadora.animarTecla("punto")
-  this.uno.addEventListener("click", function() {
+  this.punto.addEventListener("click", function() {
   var valor = display.textContent
   if (valor.indexOf(".") == -1) {
-  display.textContent += "."  
+  display.textContent += "."
   }
   })
+  Calculadora.animarTecla("sign")
+  this.sign.addEventListener("click", function() {
+  var valor = (display.textContent)*-1
+  display.textContent=valor
+  })
+  //reiniciar display.
+  Calculadora.animarTecla("on")
+  this.on.addEventListener("click",function(){
+  display.innerHTML=0
+})
 
 
 
 
 
-
+}
 }
