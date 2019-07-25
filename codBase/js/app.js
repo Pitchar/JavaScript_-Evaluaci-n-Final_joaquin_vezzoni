@@ -174,6 +174,7 @@ this.igual.addEventListener('click', function(){
   termino = parseFloat(display.textContent);
   display.innerHTML = "";
   },
+//los resultados =
   resultadoSuma: function(){
     termino2 += parseFloat(display.textContent);
     if (presionoSuma==true) {
@@ -189,12 +190,50 @@ this.igual.addEventListener('click', function(){
     termino=0;
     termino2=0;
   },
-
-
-
-
-
-
-
+  resultadoResta: function(){
+    termino2 -= parseFloat(display.textContent)*(-1);
+    if (presionoResta==true){
+      termino3 = parseFloat(display.textContent);
+      resultado=0;
+      resultado=termino-termino2;
+      display.innerHTML=resultado;
+    }else {
+      resultado-=termino3;
+      display.innerHTML=resultado;
+    }
+    presionoResta=false;
+    termino=0;
+    termino2=0;
+  },
+  resultadoMultiplica: function(){
+    termino2 = parseFloat(display.textContent);
+    if (presionoMultiplica==true){
+      termino3 = parseFloat(display.textContent);
+      resultado=0;
+      resultado=termino*termino2;
+      display.innerHTML=resultado;
+    }else {
+      resultado*=termino3;
+      display.innerHTML=resultado;
+    }
+    presionoMultiplica=false;
+    termino=0;
+    termino2=0;
+  },
+  resultadoDivide: function(){
+    termino2 = parseFloat(display.textContent);
+    if (presionoDivide==true){
+      termino3 = parseFloat(display.textContent);
+      resultado=0;
+      resultado=termino/termino2;
+      display.innerHTML=resultado;
+    }else {
+      resultado=resultado/termino3;
+      display.innerHTML=resultado;
+    }
+    presionoDivide=false;
+    termino=0;
+    termino2=0;
+  },
 }
 Calculadora.init()
