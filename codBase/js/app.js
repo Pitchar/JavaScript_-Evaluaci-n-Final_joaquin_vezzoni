@@ -178,11 +178,11 @@ this.igual.addEventListener('click', function(){
     termino2 += parseFloat(display.textContent);
     if (presionoSuma==true) {
       termino3 = parseFloat(display.textContent);
-      resultado = 0;
-      resultado = termino + termino2;
+      resultado=0;
+      resultado=termino + termino2;
       display.innerHTML = resultado;
     } else {
-      resultado += termino3;
+      resultado+=termino3;
       display.innerHTML = resultado;
     }
     presionoResta=false;
