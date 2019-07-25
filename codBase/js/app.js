@@ -144,6 +144,57 @@ this.igual.addEventListener('click', function(){
   }
   })
 },
+//funciones matematicas.
+  mostrar: function(num){
+  if (display.innerHTML.length < 8 ) {
+  if (display.innerHTML == "0") {
+      display.innerHTML = num
+  } else {
+      display.innerHTML += num
+    }
+  }
+},
+  sumar: function(){
+    presionoSuma = true;
+    termino += parseFloat(display.textContent);
+    display.innerHTML ="";
+  },
+  restar: function(){
+    presionoResta = true;
+    termino = parseFloat(display.textContent)*(-1);
+    display.innerHTML = "";
+  },
+  multiplicar: function(){
+  presionoMultiplica = true;
+  termino = parseFloat(display.textContent);
+  display.innerHTML = "";
+  },
+  dividir: function(){
+  presionoDivide = true;
+  termino = parseFloat(display.textContent);
+  display.innerHTML = "";
+  },
+  resultadoSuma: function(){
+    termino2 += parseFloat(display.textContent);
+    if (presionoSuma==true) {
+      termino3 = parseFloat(display.textContent);
+      resultado = 0;
+      resultado = termino + termino2;
+      display.innerHTML = resultado;
+    } else {
+      resultado += termino3;
+      display.innerHTML = resultado;
+    }
+    presionoResta=false;
+    termino=0;
+    termino2=0;
+  },
+
+
+
+
+
+
 
 }
 Calculadora.init()
